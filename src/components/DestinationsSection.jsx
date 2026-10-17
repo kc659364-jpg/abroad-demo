@@ -119,7 +119,6 @@ export default function DestinationsSection() {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (prefersReducedMotion) return;
 
-      // Safe ScrollTrigger animation with guaranteed visibility clearProps
       gsap.fromTo(
         '.destination-card',
         { y: 40, opacity: 0 },
@@ -145,25 +144,25 @@ export default function DestinationsSection() {
     <section
       id="destinations"
       ref={containerRef}
-      className="relative py-24 sm:py-32 bg-[#0F1F16] border-t border-[#3B8F7B]/20"
+      className="relative py-24 sm:py-32 bg-[#0B132B] border-t border-[#1C2541]"
     >
       {/* Background Accent Glow */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#a7F432]/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#E6AF2E]/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#152a1e] border border-[#a7F432]/40 text-xs text-[#a7F432] mb-3.5">
-            <Globe2 className="w-3.5 h-3.5 text-[#a7F432]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C2541] border border-[#E6AF2E]/40 text-xs text-[#E6AF2E] mb-3.5">
+            <Globe2 className="w-3.5 h-3.5 text-[#E6AF2E]" />
             <span className="font-semibold uppercase tracking-widest text-[11px]">
               Top Study Destinations
             </span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#EAF3E7] tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#F4F6F8] tracking-tight">
             Discover Your Ideal <span className="text-accent-gradient font-extrabold">Global Campus</span>
           </h2>
-          <p className="mt-4 text-[#EAF3E7]/80 text-sm sm:text-base font-light max-w-xl mx-auto leading-relaxed">
+          <p className="mt-4 text-[#F4F6F8]/80 text-sm sm:text-base font-light max-w-xl mx-auto leading-relaxed">
             Choose from the world’s most prestigious educational powerhouses. We specialize in admissions,
             scholarships, and post-study work permits for 7 premier countries.
           </p>
@@ -174,12 +173,12 @@ export default function DestinationsSection() {
           {destinationsData.map((dest, idx) => (
             <div
               key={dest.id}
-              className={`destination-card forest-glass-card rounded-3xl overflow-hidden group border border-[#3B8F7B]/30 hover:border-[#a7F432]/60 hover:shadow-[0_0_35px_rgba(167,244,50,0.2)] flex flex-col justify-between ${
+              className={`destination-card navy-glass-card rounded-3xl overflow-hidden group border border-[#1C2541] hover:border-[#E6AF2E]/60 hover:shadow-[0_0_35px_rgba(230,175,46,0.2)] flex flex-col justify-between ${
                 idx === 6 ? 'lg:col-span-3 lg:max-w-2xl lg:mx-auto w-full' : ''
               }`}
             >
               {/* Image Container with Hover Scale */}
-              <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-[#152a1e]">
+              <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-[#1C2541]">
                 <img
                   src={dest.image}
                   alt={dest.country}
@@ -187,20 +186,20 @@ export default function DestinationsSection() {
                 />
                 
                 {/* Vignette */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1F16] via-transparent to-black/40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B] via-transparent to-black/40" />
 
                 {/* Country Flag Badge */}
                 <div className="absolute top-4 left-4 flex items-center gap-2">
                   <span className="text-2xl">{dest.flag}</span>
-                  <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#0F1F16]/90 text-[#EAF3E7] border border-[#a7F432]/40 backdrop-blur-md">
+                  <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#0B132B]/90 text-[#F4F6F8] border border-[#E6AF2E]/40 backdrop-blur-md">
                     {dest.country}
                   </span>
                 </div>
 
                 {/* Post-Study Work Permit Badge */}
                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                  <span className="text-xs font-semibold text-[#a7F432] bg-[#0F1F16]/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-[#3B8F7B]/40 flex items-center gap-1.5">
-                    <Briefcase className="w-3.5 h-3.5 text-[#a7F432]" />
+                  <span className="text-xs font-semibold text-[#E6AF2E] bg-[#0B132B]/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-[#E6AF2E]/30 flex items-center gap-1.5">
+                    <Briefcase className="w-3.5 h-3.5 text-[#E6AF2E]" />
                     <span>{dest.workPermit}</span>
                   </span>
                 </div>
@@ -209,42 +208,42 @@ export default function DestinationsSection() {
               {/* Card Body */}
               <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-6">
                 <div>
-                  <h3 className="font-serif text-2xl font-bold text-[#EAF3E7] group-hover:text-[#a7F432] transition-colors mb-1">
+                  <h3 className="font-serif text-2xl font-bold text-[#F4F6F8] group-hover:text-[#E6AF2E] transition-colors mb-1">
                     Study in {dest.country}
                   </h3>
-                  <p className="text-xs text-[#a7F432] font-medium tracking-wide mb-4">
+                  <p className="text-xs text-[#E6AF2E] font-medium tracking-wide mb-4">
                     {dest.tagline}
                   </p>
 
                   {/* Highlights Grid */}
-                  <div className="space-y-3 py-3 border-y border-[#3B8F7B]/20 text-xs">
-                    <div className="flex items-start gap-2.5 text-[#EAF3E7]/85">
-                      <GraduationCap className="w-4 h-4 text-[#a7F432] shrink-0 mt-0.5" />
+                  <div className="space-y-3 py-3 border-y border-[#1C2541] text-xs">
+                    <div className="flex items-start gap-2.5 text-[#F4F6F8]/85">
+                      <GraduationCap className="w-4 h-4 text-[#E6AF2E] shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-[#EAF3E7] block">Top Universities:</strong>
-                        <span className="text-[#EAF3E7]/70 font-light">{dest.universities}</span>
+                        <strong className="text-[#F4F6F8] block">Top Universities:</strong>
+                        <span className="text-[#F4F6F8]/70 font-light">{dest.universities}</span>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-2.5 text-[#EAF3E7]/85">
-                      <Calendar className="w-4 h-4 text-[#a7F432] shrink-0 mt-0.5" />
+                    <div className="flex items-start gap-2.5 text-[#F4F6F8]/85">
+                      <Calendar className="w-4 h-4 text-[#E6AF2E] shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-[#EAF3E7] block">Major Intakes:</strong>
-                        <span className="text-[#EAF3E7]/70 font-light">{dest.intakes}</span>
+                        <strong className="text-[#F4F6F8] block">Major Intakes:</strong>
+                        <span className="text-[#F4F6F8]/70 font-light">{dest.intakes}</span>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-2.5 text-[#EAF3E7]/85">
-                      <Coins className="w-4 h-4 text-[#a7F432] shrink-0 mt-0.5" />
+                    <div className="flex items-start gap-2.5 text-[#F4F6F8]/85">
+                      <Coins className="w-4 h-4 text-[#E6AF2E] shrink-0 mt-0.5" />
                       <div>
-                        <strong className="text-[#EAF3E7] block">Avg. Tuition:</strong>
-                        <span className="text-[#EAF3E7]/70 font-light">{dest.avgCost}</span>
+                        <strong className="text-[#F4F6F8] block">Avg. Tuition:</strong>
+                        <span className="text-[#F4F6F8]/70 font-light">{dest.avgCost}</span>
                       </div>
                     </div>
                   </div>
 
-                  <p className="mt-4 text-xs text-[#EAF3E7]/75 font-light leading-relaxed italic bg-[#152a1e]/80 p-3 rounded-xl border border-[#3B8F7B]/20">
-                    💡 <span className="text-[#EAF3E7]">{dest.keyBenefit}</span>
+                  <p className="mt-4 text-xs text-[#F4F6F8]/75 font-light leading-relaxed italic bg-[#1C2541]/80 p-3 rounded-xl border border-[#E6AF2E]/20">
+                    💡 <span className="text-[#F4F6F8]">{dest.keyBenefit}</span>
                   </p>
                 </div>
 
@@ -252,7 +251,7 @@ export default function DestinationsSection() {
                 <div className="pt-2">
                   <a
                     href="#inquiry"
-                    className="w-full py-3 px-4 rounded-xl text-xs uppercase tracking-wider font-bold bg-[#152a1e] hover:bg-[#a7F432] text-[#a7F432] hover:text-[#0F1F16] border border-[#a7F432]/40 transition-all duration-300 flex items-center justify-center gap-2 group/btn"
+                    className="w-full py-3 px-4 rounded-xl text-xs uppercase tracking-wider font-bold bg-[#1C2541] hover:bg-[#E6AF2E] text-[#E6AF2E] hover:text-[#0B132B] border border-[#E6AF2E]/40 transition-all duration-300 flex items-center justify-center gap-2 group/btn cursor-pointer"
                   >
                     <span>Check Eligibility for {dest.country}</span>
                     <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />

@@ -1,9 +1,9 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'JY Overseas | Premier Study Abroad & Immigration Consultants',
+  title: 'Demo | Premier Study Abroad & Immigration Consultants',
   description:
-    'Your Global Journey Starts Here with JY Overseas. Premium study abroad counseling, IELTS/PTE coaching, scholarships, and 98.7% visa success.',
+    'Your Global Journey Starts Here with Demo. Premium study abroad counseling, IELTS/PTE coaching, scholarships, and 98.7% visa success.',
 };
 
 export default function RootLayout({ children }) {
@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className="min-h-screen bg-[#0F1F16] text-[#EAF3E7] antialiased selection:bg-[#a7F432] selection:text-[#0F1F16]"
+        className="min-h-screen bg-[#0B132B] text-[#F4F6F8] antialiased selection:bg-[#E6AF2E] selection:text-[#0B132B]"
       >
         {children}
       </body>

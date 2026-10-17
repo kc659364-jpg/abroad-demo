@@ -50,22 +50,22 @@ export default function AccreditationsSection() {
   return (
     <section
       id="accreditations"
-      className="relative py-24 sm:py-32 bg-[#0F1F16] border-t border-[#3B8F7B]/20"
+      className="relative py-24 sm:py-32 bg-[#0B132B] border-t border-[#1C2541]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-14">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#152a1e] border border-[#a7F432]/40 text-xs text-[#a7F432] mb-3.5">
-            <ShieldCheck className="w-3.5 h-3.5 text-[#a7F432]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C2541] border border-[#E6AF2E]/40 text-xs text-[#E6AF2E] mb-3.5">
+            <ShieldCheck className="w-3.5 h-3.5 text-[#E6AF2E]" />
             <span className="font-semibold uppercase tracking-widest text-[11px]">
               Trust &amp; Certifications
             </span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#EAF3E7] tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#F4F6F8] tracking-tight">
             Accredited by <span className="text-accent-gradient font-extrabold">Global Education Bodies</span>
           </h2>
-          <p className="mt-4 text-[#EAF3E7]/80 text-sm sm:text-base font-light max-w-xl mx-auto leading-relaxed">
+          <p className="mt-4 text-[#F4F6F8]/80 text-sm sm:text-base font-light max-w-xl mx-auto leading-relaxed">
             Your international education journey is safeguarded by strict institutional accreditation,
             certified visa counselors, and government-recognized compliance.
           </p>
@@ -76,45 +76,45 @@ export default function AccreditationsSection() {
       {/* Smooth Continuous Horizontal Marquee */}
       <div className="relative w-full overflow-hidden py-4">
         {/* Gradient edge fades for seamless marquee flow */}
-        <div className="absolute top-0 bottom-0 left-0 w-24 sm:w-40 bg-gradient-to-r from-[#0F1F16] to-transparent z-10 pointer-events-none" />
-        <div className="absolute top-0 bottom-0 right-0 w-24 sm:w-40 bg-gradient-to-l from-[#0F1F16] to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 left-0 w-24 sm:w-40 bg-gradient-to-r from-[#0B132B] to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 right-0 w-24 sm:w-40 bg-gradient-to-l from-[#0B132B] to-transparent z-10 pointer-events-none" />
 
         <div className="animate-marquee flex items-center gap-8">
           {[...certificates, ...certificates].map((cert, index) => (
             <div
               key={`${cert.id}-${index}`}
-              className="w-[320px] sm:w-[380px] shrink-0 forest-glass-card rounded-2xl p-5 border border-[#3B8F7B]/30 hover:border-[#a7F432]/60 group transition-all"
+              className="w-[320px] sm:w-[380px] shrink-0 navy-glass-card rounded-2xl p-5 border border-[#1C2541] hover:border-[#E6AF2E]/60 group transition-all"
             >
-              <div className="relative h-44 w-full rounded-xl overflow-hidden mb-4 bg-[#152a1e] border border-[#3B8F7B]/20">
+              <div className="relative h-44 w-full rounded-xl overflow-hidden mb-4 bg-[#1C2541] border border-[#1C2541]">
                 <img
                   src={cert.image}
                   alt={cert.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1F16] via-transparent to-transparent" />
-                <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-md text-[10px] font-mono font-semibold bg-[#0F1F16]/95 text-[#a7F432] border border-[#a7F432]/40">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B] via-transparent to-transparent" />
+                <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-md text-[10px] font-mono font-semibold bg-[#0B132B]/95 text-[#E6AF2E] border border-[#E6AF2E]/40">
                   {cert.code}
                 </span>
               </div>
 
               <div className="flex items-center gap-2 mb-1.5">
-                <Award className="w-4 h-4 text-[#a7F432] shrink-0" />
-                <h3 className="font-serif text-base font-bold text-[#EAF3E7] group-hover:text-[#a7F432] transition-colors truncate">
+                <Award className="w-4 h-4 text-[#E6AF2E] shrink-0" />
+                <h3 className="font-serif text-base font-bold text-[#F4F6F8] group-hover:text-[#E6AF2E] transition-colors truncate">
                   {cert.title}
                 </h3>
               </div>
 
-              <p className="text-xs text-[#a7F432] font-medium mb-2 truncate">
+              <p className="text-xs text-[#E6AF2E] font-medium mb-2 truncate">
                 {cert.organization}
               </p>
 
-              <p className="text-[11px] text-[#EAF3E7]/75 font-light leading-relaxed line-clamp-2">
+              <p className="text-[11px] text-[#F4F6F8]/75 font-light leading-relaxed line-clamp-2">
                 {cert.description}
               </p>
 
-              <div className="mt-3 pt-3 border-t border-[#3B8F7B]/20 flex items-center justify-between text-[10px] text-[#a7F432] font-semibold uppercase tracking-wider">
+              <div className="mt-3 pt-3 border-t border-[#1C2541] flex items-center justify-between text-[10px] text-[#E6AF2E] font-semibold uppercase tracking-wider">
                 <span>Verified Certification</span>
-                <span className="w-2 h-2 rounded-full bg-[#a7F432] animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-[#E6AF2E] animate-pulse" />
               </div>
             </div>
           ))}
@@ -123,7 +123,7 @@ export default function AccreditationsSection() {
 
       {/* Trust Guarantee Note */}
       <div className="max-w-4xl mx-auto px-4 mt-12 text-center">
-        <p className="text-xs text-[#EAF3E7]/70 font-light">
+        <p className="text-xs text-[#F4F6F8]/70 font-light">
           Official member of international recruitment associations. All applications processed through accredited university partner portals.
         </p>
       </div>

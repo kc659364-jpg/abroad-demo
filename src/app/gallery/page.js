@@ -33,7 +33,7 @@ const galleryItems = [
     id: 3,
     category: 'Modern Campus & Labs',
     title: 'High-Tech Computerized IELTS / PTE Testing Lab',
-    country: 'JY Overseas Campus',
+    country: 'Demo Campus',
     flag: '📍',
     subtext: 'Equipped with Sennheiser acoustic noise-canceling headsets and authentic mock software',
     image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80',
@@ -63,7 +63,7 @@ const galleryItems = [
     id: 6,
     category: 'Modern Campus & Labs',
     title: 'Executive 1-on-1 Visa Counseling Chambers',
-    country: 'JY Overseas Campus',
+    country: 'Demo Campus',
     flag: '📍',
     subtext: 'Private, confidential consultation suites for parents and prospective applicants',
     image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80',
@@ -107,41 +107,41 @@ export default function GalleryPage() {
       : galleryItems.filter((item) => item.category === activeFilter);
 
   return (
-    <div className="min-h-screen bg-[#0F1F16] text-[#EAF3E7] py-16 sm:py-24 selection:bg-[#a7F432] selection:text-[#0F1F16]">
+    <div className="min-h-screen bg-[#0B132B] text-[#F4F6F8] py-16 sm:py-24 selection:bg-[#E6AF2E] selection:text-[#0B132B]">
       {/* Decorative ambient aura */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-[#a7F432]/6 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-[#E6AF2E]/6 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Navigation Bar Back */}
-        <div className="flex items-center justify-between pb-8 mb-12 border-b border-[#3B8F7B]/20">
+        <div className="flex items-center justify-between pb-8 mb-12 border-b border-[#1C2541]">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#152a1e] text-[#a7F432] border border-[#a7F432]/40 hover:bg-[#a7F432] hover:text-[#0F1F16] text-xs font-bold uppercase tracking-wider transition-all"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1C2541] text-[#E6AF2E] border border-[#E6AF2E]/40 hover:bg-[#E6AF2E] hover:text-[#0B132B] text-xs font-bold uppercase tracking-wider transition-all"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Return to Homepage</span>
           </Link>
 
-          <div className="flex items-center gap-2 text-xs text-[#EAF3E7]/70">
-            <GraduationCap className="w-4 h-4 text-[#a7F432]" />
-            <span className="font-semibold text-[#EAF3E7]">JY OVERSEAS</span>
+          <div className="flex items-center gap-2 text-xs text-[#F4F6F8]/70">
+            <GraduationCap className="w-4 h-4 text-[#E6AF2E]" />
+            <span className="font-semibold text-[#F4F6F8]">DEMO</span>
             <span>• Success Gallery</span>
           </div>
         </div>
 
         {/* Page Title */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#152a1e] border border-[#a7F432]/40 text-xs text-[#a7F432] mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-[#a7F432]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1C2541] border border-[#E6AF2E]/40 text-xs text-[#E6AF2E] mb-4">
+            <Sparkles className="w-3.5 h-3.5 text-[#E6AF2E]" />
             <span className="font-semibold uppercase tracking-widest text-[11px]">
               Visual Gallery &amp; Archives
             </span>
           </div>
-          <h1 className="font-serif text-4xl sm:text-6xl font-bold text-[#EAF3E7] tracking-tight">
+          <h1 className="font-serif text-4xl sm:text-6xl font-bold text-[#F4F6F8] tracking-tight">
             Our Campus &amp; <span className="text-accent-gradient font-extrabold">Success Stories</span>
           </h1>
-          <p className="mt-4 text-[#EAF3E7]/80 text-sm sm:text-base font-light leading-relaxed">
+          <p className="mt-4 text-[#F4F6F8]/80 text-sm sm:text-base font-light leading-relaxed">
             Explore authentic visa approvals, our state-of-the-art classroom facilities, and global delegation visits. 
             Real students, verified admissions, and lifetime career milestones.
           </p>
@@ -155,8 +155,8 @@ export default function GalleryPage() {
               onClick={() => setActiveFilter(cat)}
               className={`px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold transition-all cursor-pointer ${
                 activeFilter === cat
-                  ? 'bg-[#a7F432] text-[#0F1F16] font-bold shadow-[0_0_20px_rgba(167,244,50,0.4)]'
-                  : 'bg-[#152a1e] text-[#EAF3E7]/80 border border-[#3B8F7B]/30 hover:text-[#EAF3E7] hover:border-[#a7F432]/40'
+                  ? 'bg-[#E6AF2E] text-[#0B132B] font-bold shadow-[0_0_20px_rgba(230,175,46,0.4)]'
+                  : 'bg-[#1C2541] text-[#F4F6F8]/80 border border-[#1C2541] hover:text-[#F4F6F8] hover:border-[#E6AF2E]/40'
               }`}
             >
               {cat}
@@ -169,36 +169,36 @@ export default function GalleryPage() {
           {filteredItems.map((item) => (
             <div
               key={item.id}
-              className="forest-glass-card rounded-3xl overflow-hidden border border-[#3B8F7B]/30 hover:border-[#a7F432]/60 group flex flex-col justify-between"
+              className="navy-glass-card rounded-3xl overflow-hidden border border-[#1C2541] hover:border-[#E6AF2E]/60 group flex flex-col justify-between"
             >
-              <div className="relative h-64 w-full overflow-hidden bg-[#152a1e]">
+              <div className="relative h-64 w-full overflow-hidden bg-[#1C2541]">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1F16] via-transparent to-black/30" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B] via-transparent to-black/30" />
                 
-                <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#0F1F16]/90 text-[#a7F432] border border-[#a7F432]/40 backdrop-blur-md">
+                <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#0B132B]/90 text-[#E6AF2E] border border-[#E6AF2E]/40 backdrop-blur-md">
                   {item.tag}
                 </span>
 
                 <div className="absolute bottom-3 left-3 flex items-center gap-2">
                   <span className="text-xl">{item.flag}</span>
-                  <span className="text-xs font-semibold text-[#EAF3E7] bg-[#0F1F16]/90 px-2.5 py-1 rounded-lg backdrop-blur-md">
+                  <span className="text-xs font-semibold text-[#F4F6F8] bg-[#0B132B]/90 px-2.5 py-1 rounded-lg backdrop-blur-md">
                     {item.country}
                   </span>
                 </div>
               </div>
 
               <div className="p-6">
-                <span className="text-[10px] uppercase tracking-wider text-[#a7F432] font-semibold block mb-1">
+                <span className="text-[10px] uppercase tracking-wider text-[#E6AF2E] font-semibold block mb-1">
                   {item.category}
                 </span>
-                <h3 className="font-serif text-lg font-bold text-[#EAF3E7] group-hover:text-[#a7F432] transition-colors mb-2">
+                <h3 className="font-serif text-lg font-bold text-[#F4F6F8] group-hover:text-[#E6AF2E] transition-colors mb-2">
                   {item.title}
                 </h3>
-                <p className="text-xs text-[#EAF3E7]/70 font-light leading-relaxed">
+                <p className="text-xs text-[#F4F6F8]/70 font-light leading-relaxed">
                   {item.subtext}
                 </p>
               </div>
@@ -207,17 +207,17 @@ export default function GalleryPage() {
         </div>
 
         {/* Bottom CTA to Visit Campus */}
-        <div className="mt-20 forest-glass rounded-3xl p-8 sm:p-12 border border-[#3B8F7B]/30 text-center max-w-4xl mx-auto shadow-2xl">
-          <h2 className="font-serif text-2xl sm:text-4xl font-bold text-[#EAF3E7] mb-4">
+        <div className="mt-20 navy-glass rounded-3xl p-8 sm:p-12 border border-[#1C2541] text-center max-w-4xl mx-auto shadow-2xl">
+          <h2 className="font-serif text-2xl sm:text-4xl font-bold text-[#F4F6F8] mb-4">
             Want to Experience Our Campus in Person?
           </h2>
-          <p className="text-[#EAF3E7]/80 text-sm max-w-xl mx-auto font-light leading-relaxed mb-8">
+          <p className="text-[#F4F6F8]/80 text-sm max-w-xl mx-auto font-light leading-relaxed mb-8">
             Walk into our flagship office for a face-to-face evaluation with our admissions directors and IELTS master trainers.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/#inquiry"
-              className="px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-widest bg-[#a7F432] text-[#0F1F16] shadow-lg hover:scale-105 transition-all"
+              className="px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-widest bg-[#E6AF2E] text-[#0B132B] shadow-lg hover:scale-105 transition-all"
             >
               Book In-Person Campus Appointment
             </Link>

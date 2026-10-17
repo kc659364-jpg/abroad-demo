@@ -8,11 +8,11 @@ import GalleryCTA from '@/components/GalleryCTA';
 import InquiryForm from '@/components/InquiryForm';
 
 export const metadata = {
-  title: 'JY Overseas | Premier Study Abroad & Global Visa Consultancy',
+  title: 'Demo | Premier Study Abroad & Global Visa Consultancy',
   description:
-    'Your Global Journey Starts Here with JY Overseas. Empowering students with top university admissions, IELTS/PTE coaching, and transparent visa processing for USA, UK, Canada, Australia, Germany, New Zealand, and Ireland.',
+    'Your Global Journey Starts Here with Demo. Empowering students with top university admissions, IELTS/PTE coaching, and transparent visa processing for USA, UK, Canada, Australia, Germany, New Zealand, and Ireland.',
   keywords: [
-    'JY Overseas',
+    'Demo',
     'Study abroad consultancy',
     'Study in USA',
     'Study in UK',
@@ -26,8 +26,8 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0F1F16] text-[#EAF3E7] flex flex-col selection:bg-[#a7F432] selection:text-[#0F1F16]">
-      {/* 1. Fixed Forest Glassmorphism Navbar */}
+    <main className="min-h-screen bg-[#0B132B] text-[#F4F6F8] flex flex-col selection:bg-[#E6AF2E] selection:text-[#0B132B]">
+      {/* 1. Fixed Navy Glassmorphism Navbar */}
       <Navbar />
 
       {/* 2. Hero Section with 3D Earth Globe, Orbiting Plane & GSAP Staggered Reveal */}
